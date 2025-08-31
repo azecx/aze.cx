@@ -153,4 +153,5 @@ hr {
     font-family: 'Roboto Mono', monospace;
     border: 2px var(--text-color) dashed;
     padding: 2px;
+    cursor: pointer;
 }
