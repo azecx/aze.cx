@@ -4,37 +4,47 @@
     font-display: swap;
 }
 
+@font-face {
+    font-family: 'Merchant Copy';
+    src: url(merchantcopy.ttf);
+    font-display: swap;
+}
+
+
+/* Default: Dark Mode */
 :root {
-    --text-color: #000000;
-    --link-color: #0000ee;
-}
-
-*,
-*::before,
-*::after {
-    box-sizing: inherit;
-}
-
-* {
-    padding: 0px;
-    margin: 0px;
-}
-
-html {
-    font-family: 
-    'Roboto Mono', 
-    monospace;
-    font-size: 14px;
-    box-sizing: border-box;
-    height: 100%;
+    --text-color: #eeeeee;
+    --link-color: #0392da;
+    --bg-color: #000000;
+    --input-bg: #111111;
+    --input-border: #343434;
 }
 
 body {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 14px;
     max-width: 768px;
     min-height: 100vh;
     margin: 0 auto;
     padding: 12px 6px;
     color: var(--text-color);
+    background-color: var(--bg-color);
+}
+
+.light-mode {
+    --text-color: #000000;
+    --link-color: #0000ee;
+    --bg-color: #ffffff;
+    --input-bg: #ffffff;
+    --input-border: #cccccc;
+} 
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 
 img {
@@ -85,29 +95,17 @@ h2::before {
     content: "### ";
 }
 
-@media (prefers-color-scheme: dark) {
-    :root {
-        --text-color: #eeeeee;
-        --link-color: #0392da;
-    }
+input,
+select {
+    background-color: var(--input-bg);
+    border-color: var(--input-border);
+    border-style: solid;
+    border-radius: 2px;
+    color: var(--text-color);
+}
 
-    body {
-        background: #000000;
-        color: var(--text-color);
-    }
-
-    input,
-    select {
-        background-color: #111111;
-        border-color: #343434;
-        border-style: solid;
-        border-radius: 2px;
-        color: var(--text-color);
-    }
-
-    hr {
-        filter: brightness(0.3);
-    }
+hr {
+    filter: brightness(0.3);
 }
 
 #more {
@@ -119,15 +117,15 @@ h2::before {
 .skills-grid {
     display: flex;
     flex-wrap: wrap;
-    gap: 0; 
-    margin: 0; 
+    gap: 0;
+    margin: 0;
     padding: 0;
 }
 
 .skill {
-    width: 48px;       
+    width: 48px;
     height: 48px;
-    margin: 0;        
+    margin: 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -137,4 +135,22 @@ h2::before {
     max-width: 100%;
     max-height: 100%;
     object-fit: contain;
+}
+
+.title-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.buttons {
+    display: flex;
+}
+
+#modeButton {
+    background-color: transparent;
+    color: var(--text-color);
+    font-family: 'Roboto Mono', monospace;
+    border: 2px var(--text-color) dashed;
+    padding: 2px;
 }
