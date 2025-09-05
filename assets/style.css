@@ -1,157 +1,241 @@
 @font-face {
-    font-family: 'Roboto Mono';
-    src: url(robotomono.woff2) format('woff2');
-    font-display: swap;
+	font-family: 'Roboto Mono';
+	src: url(robotomono.woff2) format('woff2');
+	font-display: swap;
 }
-
 @font-face {
-    font-family: 'Andalemo';
-    src: url(ANDALEMO.TTF);
-    font-display: swap;
+	font-family: 'Andalemo';
+	src: url(ANDALEMO.TTF);
+	font-display: swap;
 }
-
-
 /* Default: Dark Mode */
 :root {
-    --text-color: #eeeeee;
-    --link-color: #0392da;
-    --bg-color: #000000;
-    --input-bg: #111111;
-    --input-border: #343434;
+	--text-color: #eeeeee;
+	--link-color: #0392da;
+	--bg-color: #000000;
+	--input-bg: #111111;
+	--input-border: #343434;
 }
-
 body {
-    font-family: 'Roboto Mono', monospace;
-    font-size: 14px;
-    max-width: 768px;
-    min-height: 100vh;
-    margin: 0 auto;
-    padding: 12px 6px;
-    color: var(--text-color);
-    background-color: var(--bg-color);
+	font-family: 'Roboto Mono', monospace;
+	font-size: 14px;
+	max-width: 768px;
+	min-height: 100vh;
+	margin: 0 auto;
+	padding: 12px 6px;
+	color: var(--text-color);
+	background-color: var(--bg-color);
 }
-
 .light-mode {
-    --text-color: #000000;
-    --link-color: #0000ee;
-    --bg-color: #ffffff;
-    --input-bg: #ffffff;
-    --input-border: #cccccc;
-} 
-
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+	--text-color: #000000;
+	--link-color: #0000ee;
+	--bg-color: #ffffff;
+	--input-bg: #ffffff;
+	--input-border: #cccccc;
 }
-
+*,*::before,*::after {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
 img {
-    max-width: 50px;
-    height: auto;
+	max-width: 50px;
+	height: auto;
 }
-
-a,
-a:visited {
-    color: var(--link-color);
+a,a:visited {
+	color: var(--link-color);
 }
-
-a:active,
-a:hover {
-    color: #ffffff;
-    background-color: var(--link-color);
+a:active,a:hover {
+	color: #ffffff;
+	background-color: var(--link-color);
 }
-
 p, ul, ol, hr, section {
-    margin: 12px 0;
+	margin: 12px 0;
 }
-
 li {
-    list-style-type: square;
+	list-style-type: square;
 }
-
 h1, h2, h3, h4, h5, h6 {
-    font-size: 1rem;
-    position: relative;
-    display: inline-block;
-    margin: 0.25rem 0;
+	font-size: 1rem;
+	position: relative;
+	display: inline-block;
+	margin: 0.25rem 0;
 }
-
 h1 {
-    padding-bottom: 1rem;
-    margin-bottom: 0;
-    overflow: hidden;
+	padding-bottom: 1rem;
+	margin-bottom: 0;
+	overflow: hidden;
 }
-
 h1::after {
-    content: "=================================================";
-    position: absolute;
-    left: 0;
-    top: 1rem;
+	content: "=================================================";
+	position: absolute;
+	left: 0;
+	top: 1rem;
 }
-
 h2::before {
-    content: "### ";
+	content: "### ";
 }
-
-input,
-select {
-    background-color: var(--input-bg);
-    border-color: var(--input-border);
-    border-style: solid;
-    border-radius: 2px;
-    color: var(--text-color);
+input,select {
+	background-color: var(--input-bg);
+	border-color: var(--input-border);
+	border-style: solid;
+	border-radius: 2px;
+	color: var(--text-color);
 }
-
 hr {
-    filter: brightness(0.3);
+	filter: brightness(0.3);
 }
-
 #more {
-    font-style: italic;
-    font-size: 12px;
-    margin-top: 3px;
+	font-style: italic;
+	font-size: 12px;
+	margin-top: 3px;
 }
-
 .skills-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0;
-    margin: 0;
-    padding: 0;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0;
+	margin: 0;
+	padding: 0;
 }
-
 .skill {
-    width: 48px;
-    height: 48px;
-    margin: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+	width: 48px;
+	height: 48px;
+	margin: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
-
 .skill img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
+	max-width: 100%;
+	max-height: 100%;
+	object-fit: contain;
 }
-
 .title-section {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
-
 .buttons {
-    display: flex;
+	display: flex;
 }
-
 #modeButton {
-    background-color: transparent;
-    color: var(--text-color);
-    font-family: 'Roboto Mono', monospace;
-    border: 2px var(--text-color) dashed;
-    padding: 2px;
-    cursor: pointer;
+	background-color: transparent;
+	color: var(--text-color);
+	font-family: 'Roboto Mono', monospace;
+	border: 2px var(--text-color) dashed;
+	padding: 2px;
+	cursor: pointer;
+}
+.music {
+	display: flex;
+	flex-direction: column;
+}
+#artists-container {
+	margin-top: 10px;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 15px;
+	width: 100%;
+	max-width: 800px;
+}
+.artist {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	width: 100px;
+	height: 100px;
+	border: 1px solid var(--text-color);
+	padding: px;
+	box-sizing: border-box;
+	transition: transform 0.2s, background-color 0.3s;
+	text-decoration: none;
+	color: inherit;
+	color: var(--text-color) !important;
+	justify-content: center;
+	margin-bottom: 20px;
+	border-radius: 8px;
+}
+.artist:hover {
+	transform: translateY(-2px);
+	background-color: transparent;
+}
+.artist img {
+	width: 80px;
+	border-radius: 5px;
+	margin-bottom: 5px;
+	object-fit: cover;
+}
+.artist p {
+	font-size: 12px;
+	line-height: 1.2;
+	margin: 0;
+}
+#tracks-container {
+	display: flex;
+	gap: 12px;
+	width: 100%;
+	max-width: 800px;
+	margin-top: 8px;
+	background-color: transparent;
+}
+.track {
+	color: var(--text-color) !important;
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	padding: 10px 14px;
+	border: none;
+	border-radius: 8px;
+	text-decoration: none;
+	color: inherit;
+	transition: transform 0.14s ease, background-color 0.2s ease;
+	width: fit-content;
+	box-sizing: border-box;
+	border: 1px var(--text-color) solid;
+}
+/* subtle hover */
+.track:hover {
+	transform: translateY(-2px);
+	background-color: transparent;
+}
+.track img {
+	width: 84px;
+	flex: 0 0 84px;
+	object-fit: cover;
+	border-radius: 6px;
+}
+.track-info {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: left;
+	min-width: 0;
+}
+.track-title {
+	font-weight: 700;
+	font-size: 13px;
+	margin: 0;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.track-artist {
+	margin: 4px 0 0;
+	font-size: 10px;
+	opacity: 0.85;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	color: lightgray;
+}
+/* Responsive: allow titles to wrap on very narrow screens */
+@media (max-width: 420px) {
+	.track {
+		gap: 10px;
+		padding: 8px;
+	}
+	.track-title, .track-artist {
+		white-space: normal;
+	}
 }
