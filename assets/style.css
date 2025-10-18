@@ -239,3 +239,11 @@ hr {
 		white-space: normal;
 	}
 }
+
+.center {
+	text-align: center;
+}
+
+.astolfo {
+	min-width: 400px !important;
+}
