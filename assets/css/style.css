@@ -1,0 +1,158 @@
+@font-face {
+	font-family: 'Roboto Mono';
+	src: url(../font/robotomono.woff2) format('woff2');
+	font-display: swap;
+}
+
+/* darkmode */
+:root {
+	--text-color: #fbf1c7;
+	--link-color:  #d3869b;
+	--bg-color:  #1d2021;
+	--input-bg: #282828;
+	--input-border: #32302f;
+}
+
+
+/* lightmode */
+.light-mode {
+	--text-color: #1d2021;
+	--link-color: #d3869b;
+	--bg-color: #fbf1c7;
+	--input-bg:  #d5c4a1;
+	--input-border: #ebdbb2;
+}
+
+
+body {
+	font-family: 'Roboto Mono', monospace;
+	font-size: 14px;
+	max-width: 768px;
+	min-height: 100vh;
+	margin: 0 auto;
+	padding: 12px 6px;
+	color: var(--text-color);
+	background-color: var(--bg-color);
+}
+
+*,*::before,*::after {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+img {
+	max-width: 50px;
+	height: auto;
+}
+
+a,a:visited {
+	color: var(--link-color);
+}
+
+a:active,a:hover {
+	color: #ffffff;
+	background-color: var(--link-color);
+}
+
+p, ul, ol, hr, section {
+	margin: 12px 0;
+}
+
+li {
+	list-style-type: square;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-size: 1rem;
+	position: relative;
+	display: inline-block;
+	margin: 0.25rem 0;
+}
+
+h1 {
+	padding-bottom: 1rem;
+	margin-bottom: 0;
+	overflow: hidden;
+}
+
+h1::after {
+	content: "=================================================";
+	position: absolute;
+	left: 0;
+	top: 1rem;
+}
+
+h2::before {
+	content: "### ";
+}
+
+input,select {
+	background-color: var(--input-bg);
+	border-color: var(--input-border);
+	border-style: solid;
+	border-radius: 2px;
+	color: var(--text-color);
+}
+
+hr {
+	filter: brightness(0.3);
+	color: var(--text-color);
+}
+
+#more {
+	font-style: italic;
+	font-size: 12px;
+	margin-top: 3px;
+}
+
+.skills {
+  display: flex;
+  justify-content: space-between;
+  max-width: 450px; 
+  margin: 0 0;  
+  font-family: monospace;
+}
+
+.skills .column {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+}
+
+.skills .column p {
+	margin-top: 0px;
+}
+
+strong {
+	color: var(--link-color);
+}
+
+.title-section {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.buttons {
+	display: flex;
+}
+
+#modeButton {
+	background-color: transparent;
+	color: var(--text-color);
+	font-family: 'Roboto Mono', monospace;
+	border: 2px var(--text-color) dashed;
+	padding: 2px;
+	cursor: pointer;
+}
+
+.center {
+	margin-left: 0 auto;
+	text-align: center;
+	max-width: 768px;
+}
+
+.astolfo {
+	max-width: 250px !important;
+}
