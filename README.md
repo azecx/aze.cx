@@ -1,4 +1,4 @@
-# [aze.cx](https://aze.cx)
+# > aze.cx
 
 My minimalistic webpage where I write about my projects, hobbies and other stuff.
 No frameworks, no bloat, just pure HTML, CSS, and a tiny bit of JS.
